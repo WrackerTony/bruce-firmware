@@ -2,7 +2,7 @@ import time
 
 import serial
 
-ser = serial.Serial("COM4", 115200, timeout=1)
+ser = serial.Serial("COM6", 115200, timeout=1)
 time.sleep(1)
 
 # Force ESP32 reset (DTR/RTS toggle)
