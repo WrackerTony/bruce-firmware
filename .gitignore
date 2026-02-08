@@ -16,3 +16,7 @@ checksum.sha256
 .vscode/extensions.json
 
 build_output/
+mqjs_build
+docker-logs
+lib/mquickjs_headers/mqjs_stdlib_generator
+lib/mquickjs_headers/mqjs_stdlib_generator.exe

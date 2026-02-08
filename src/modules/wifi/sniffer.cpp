@@ -30,8 +30,8 @@
 #include "core/mykeyboard.h"
 #include "core/sd_functions.h"
 #include "core/wifi/wifi_common.h"
+#include "core/wifi/webInterface.h"
 #include <Arduino.h>
-#include <TimeLib.h>
 #include <globals.h>
 #if defined(ESP32)
 #include "FS.h"
@@ -945,6 +945,9 @@ static std::vector<String> recentSsidsOnChannel(uint8_t channel, size_t maxItems
 
 //===== SETUP =====//
 void sniffer_setup() {
+    // Stop WebUI before setting WiFi mode for sniffer
+    cleanlyStopWebUiForWiFiFeature();
+    
     FS *Fs;
     int redraw = true;
     bool clearScreen = true;
